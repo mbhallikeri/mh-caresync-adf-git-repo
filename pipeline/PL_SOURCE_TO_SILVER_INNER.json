@@ -316,6 +316,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"on": {
+						"value": "@activity('Get_Data_for_table-id').output.firstRow.source_system",
+						"type": "Expression"
+					},
 					"cases": [
 						{
 							"value": "neon_postgres",
