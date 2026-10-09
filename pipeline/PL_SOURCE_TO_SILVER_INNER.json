@@ -81,6 +81,10 @@
 						"table_name": {
 							"value": "@activity('Get_Data_for_table-id').output.firstRow.bronze_table_name",
 							"type": "Expression"
+						},
+						"source_file_format": {
+							"value": "@coalesce(activity('Get_Data_for_table-id').output.firstRow.source_file_format, '')",
+							"type": "Expression"
 						}
 					}
 				},
