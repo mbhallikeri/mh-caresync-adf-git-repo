@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "PostGres_2_ADLS_COPY",
+				"description": "Test copy of Postgres ADLS copy",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
