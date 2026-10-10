@@ -1079,6 +1079,23 @@
 										],
 										"scriptBlockExecutionTimeout": "02:00:00"
 									}
+								},
+								{
+									"name": "Update Pipeline has failed",
+									"type": "Fail",
+									"dependsOn": [
+										{
+											"activity": "Execute Source to Silver PL",
+											"dependencyConditions": [
+												"Failed"
+											]
+										}
+									],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "Inner Pipeline failed",
+										"errorCode": "500"
+									}
 								}
 							]
 						}
