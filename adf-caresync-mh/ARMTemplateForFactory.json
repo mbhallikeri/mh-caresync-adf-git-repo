@@ -403,6 +403,23 @@
 										],
 										"scriptBlockExecutionTimeout": "02:00:00"
 									}
+								},
+								{
+									"name": "Silver To Gold Failed",
+									"type": "Fail",
+									"dependsOn": [
+										{
+											"activity": "Silver To Gold",
+											"dependencyConditions": [
+												"Failed"
+											]
+										}
+									],
+									"userProperties": [],
+									"typeProperties": {
+										"message": "Silver to Gold Failed",
+										"errorCode": "500"
+									}
 								}
 							]
 						}
