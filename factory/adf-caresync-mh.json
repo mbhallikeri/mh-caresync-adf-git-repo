@@ -1,0 +1,12 @@
+{
+	"name": "adf-caresync-mh",
+	"properties": {
+		"globalParameters": {
+			"email_recipient": {
+				"type": "string",
+				"value": "mbhallikeriadf01@gmail.com"
+			}
+		}
+	},
+	"location": "westus"
+}
