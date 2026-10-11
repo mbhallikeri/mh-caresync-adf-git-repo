@@ -1,5 +1,5 @@
 {
-	"name": "MASTER",
+	"name": "PL_MASTER",
 	"properties": {
 		"activities": [
 			{
@@ -72,6 +72,35 @@
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "PL_SILVER_TO_GOLD",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"adf_run_id": {
+							"value": "@pipeline().RunId",
+							"type": "Expression"
+						}
+					}
+				}
+			},
+			{
+				"name": "Call Send email",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Silver to Gold",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "PL_SEND_EMAIL",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true,
