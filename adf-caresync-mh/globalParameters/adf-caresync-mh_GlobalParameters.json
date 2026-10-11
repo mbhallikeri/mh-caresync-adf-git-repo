@@ -1,1 +1,14 @@
-{}
+{
+	"email_recipient": {
+		"type": "string",
+		"value": "mbhallikeriadf01@gmail.com"
+	},
+	"env": {
+		"type": "string",
+		"value": "DEV"
+	},
+	"logic_app_url": {
+		"type": "string",
+		"value": "https://prod-03.westus2.logic.azure.com:443/workflows/6f9d287d602f43d4b5f7d7858560446e/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=BGVBo6UwarpeOSPGDKHZyg9DQkm0KZk1b228skeNK28"
+	}
+}
